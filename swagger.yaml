@@ -4,7 +4,7 @@ info:
   description: |
     Estas APIs visam o compartilhamento de dados sobre Investimentos e suas
     características entre as Instituições Financeiras participantes do Open Finance Brasil
-  version: 1.0.1
+  version: 1.0.2
   license:
     name: Apache 2.0
     url: 'https://www.apache.org/licenses/LICENSE-2.0'
@@ -449,7 +449,7 @@ components:
           type: string
           description: CNPJ da instituição emissora.
           maxLength: 14
-          pattern: '^\d{14}$'
+          pattern: '^[0-9A-Z]{12}[0-9]{2}$'
           example: '45086338000178'
         issuerInstitutionName:
           type: string
@@ -574,7 +574,7 @@ components:
           type: string
           description: CNPJ do fundo de investimento.
           maxLength: 14
-          pattern: '^\d{14}$'
+          pattern: '^[0-9A-Z]{12}[0-9]{2}$'
           example: '64108803000191'
         isinCode:
           type: string
@@ -612,7 +612,7 @@ components:
           type: string
           description: CNPJ do administrador.
           maxLength: 14
-          pattern: '^\d{14}$'
+          pattern: '^[0-9A-Z]{12}[0-9]{2}$'
           example: '14511732000150'
       additionalProperties: false
     InvestmentsFundFundManager:
@@ -631,7 +631,7 @@ components:
           type: string
           description: CNPJ do gestor do fundo de investimento.
           maxLength: 14
-          pattern: '^\d{14}$'
+          pattern: '^[0-9A-Z]{12}[0-9]{2}$'
           example: '16332711000101'
       additionalProperties: false
     InvestmentsFundFees:
@@ -989,7 +989,7 @@ components:
       type: string
       description: 'O CNPJ corresponde ao número de inscrição no Cadastro de Pessoa Jurídica. Deve-se ter apenas os números do CNPJ, sem máscara.'
       maxLength: 14
-      pattern: '^\d{14}$'
+      pattern: '^[0-9A-Z]{12}[0-9]{2}$'
       example: '13456789000112'
     Links:
       type: object
